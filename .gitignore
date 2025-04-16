@@ -1,0 +1,63 @@
+# === Node Modules ===
+frontend/node_modules
+backend/node_modules
+
+# === Environment Variables ===
+.env
+frontend/.env
+frontend/.env.local
+backend/.env
+
+# === Build Output ===
+dist/
+build/
+frontend/.next/
+frontend/out/
+
+# === Logs ===
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# === Coverage ===
+coverage/
+
+# === Temporary / Backup Files ===
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.orig
+*.rej
+*.out
+*.pid
+*.seed
+*.pid.lock
+*.seed.lock
+
+# === IDE/Editor Specific ===
+.idea/
+.vscode/
+*.code-workspace
+
+# === System Files ===
+.DS_Store
+Thumbs.db
+
+# === Package Locks ===
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# === Testing ===
+__tests__/
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# === Cache ===
+.cache/
+.next/

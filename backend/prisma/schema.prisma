@@ -1,0 +1,63 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  userName         String   @id // or use @unique if you want to have a separate primary key
+  name             String
+  email            String   @unique
+  password         String
+  isInstructor     Boolean
+  profileImagePath String?
+  recoveryEmail    String?
+  Student          Student?
+}
+
+model Student {
+  id         Int      @id @default(autoincrement())
+  userName   String   @unique
+  name       String
+  courses    Course[] 
+  submissions AssignmentSubmission[]
+  user       User     @relation(fields: [userName], references: [userName])
+}
+
+
+model Course {
+  courseId   Int      @id @default(autoincrement())
+  courseName String
+  instructor String
+  description String
+  students   Student[]
+  assignments Assignment[]
+}
+
+
+model Assignment {
+  assignmentId   Int     @id @default(autoincrement())
+  dueDate        DateTime
+  jsonData       String
+  courseId       Int
+  assignmentName String
+  published      Boolean @default(false)
+  Course         Course  @relation(fields: [courseId], references: [courseId])
+  submissions    AssignmentSubmission[]
+}
+
+model AssignmentSubmission {
+  submissionId    Int       @id @default(autoincrement())
+  assignmentId    Int
+  assignmentGrade Float
+  studentId       Int
+  answers         String[]  // Bætt við þetta línu
+
+  Assignment      Assignment @relation(fields: [assignmentId], references: [assignmentId])
+  Student         Student    @relation(fields: [studentId], references: [id])
+}
+
