@@ -17,7 +17,8 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://learning-platform-theta-rose.vercel.app" // ✅ VERCEL FRAMMENDI
+      "https://learning-platform-theta-rose.vercel.app",
+      "https://learning-platform-qicfhxbno-andris-projects-15e04138.vercel.app",
     ],
     credentials: true,
   }));
