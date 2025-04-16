@@ -10,18 +10,23 @@ import submissionRoutes from "./routes/submissionRoutes";
 import dotenv from "dotenv";
 import cors from "cors";
 
+const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(",") || [];
+
 const app = express();
 dotenv.config();
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "https://learning-platform-theta-rose.vercel.app",
-      "https://learning-platform-qicfhxbno-andris-projects-15e04138.vercel.app",
-    ],
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
-  }));
+  })
+);
 
 
 app.use(express.json());
