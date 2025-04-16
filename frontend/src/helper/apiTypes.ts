@@ -83,12 +83,12 @@ export interface CourseRequest extends Omit<Course, "courseId"> {
 
 // ==================== User & Auth ====================
 export interface Student {
-  userName: string;
+  username: string;
   name: string;
 }
 
 export interface User {
-  userName: string;
+  username: string;
   name: string;
   email: string;
   isInstructor: boolean;
@@ -96,7 +96,7 @@ export interface User {
 }
 
 export interface SignupData {
-  userName: string;
+  username: string;
   name: string;
   email: string;
   password: string;
@@ -104,7 +104,7 @@ export interface SignupData {
 }
 
 export interface Credentials {
-  userName: string;
+  username: string;
   password: string;
 }
 
@@ -118,12 +118,12 @@ export interface UpdateUserData {
 // ==================== Submissions & Grades ====================
 export interface SubmissionRequest {
   assignmentId: number;
-  userName: string;
+  username: string;
   answers: string[];
 }
 
 export interface StudentGrade {
-  userName: string;
+  username: string;
   assignmentGrade: number;
 }
 
