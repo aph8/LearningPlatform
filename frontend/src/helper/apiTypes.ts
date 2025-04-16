@@ -96,11 +96,12 @@ export interface User {
 }
 
 export interface SignupData {
-  userName: string;
+  username: string;
   name: string;
   email: string;
   password: string;
-  role: string;
+  confirmPassword: string;
+  isInstructor: boolean;
 }
 
 export interface Credentials {

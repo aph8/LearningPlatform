@@ -41,11 +41,12 @@ export default function SignupForm() {
   const onSubmit = async (data: SignupFormData) => {
     try {
       const transformedPayload = {
-        userName: data.username,
+        username: data.username,
         name: data.name,
         email: data.email,
         password: data.password,
-        role: data.isInstructor ? "instructor" : "student",
+        confirmPassword: data.confirmPassword, // ✅ ADD THIS
+        isInstructor: data.isInstructor,    
       };
 
       const response = await signupApi.signUp(transformedPayload);
