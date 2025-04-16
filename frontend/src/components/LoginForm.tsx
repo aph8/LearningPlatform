@@ -31,16 +31,15 @@ export default function LoginForm() {
 
   const onSubmit = async (data: LoginFormData) => {
     try {
-      // ✅ Transform to match expected API shape
       const credentials = {
-        userName: data.username,
+        username: data.username,
         password: data.password,
       };
 
       const response = await loginApi.login(credentials);
       console.log(response.data);
 
-      localStorage.setItem("username", credentials.userName);
+      localStorage.setItem("username", credentials.username);
 
       if (response.data.isInstructor) {
         router.push("/dashboard/teacher");
