@@ -15,10 +15,12 @@ dotenv.config();
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://learning-platform-rust.vercel.app"],
+    origin: [
+      "http://localhost:3000",
+      "https://learning-platform-theta-rose.vercel.app" // ✅ VERCEL FRAMMENDI
+    ],
     credentials: true,
-  })
-);
+  }));
 
 
 app.use(express.json());
