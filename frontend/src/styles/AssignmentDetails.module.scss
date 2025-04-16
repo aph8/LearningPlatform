@@ -1,0 +1,48 @@
+$bg-color: #ffffff;
+$foreground: #333333;
+$border-color: #ccc;
+$primary: #0070f3;
+$padding: 0.5rem;
+$label-margin-bottom: 0.25rem;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @media (max-width: 480px) {
+    gap: 0.75rem;
+  }
+}
+
+.label {
+  display: block;
+  margin-bottom: $label-margin-bottom;
+  font-weight: 500;
+  color: $foreground;
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
+}
+
+.inputField {
+  width: 100%;
+  padding: $padding;
+  border: 1px solid $border-color;
+  border-radius: 0.5rem;
+  background-color: $bg-color;
+  color: $foreground;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    border-color: $primary;
+    outline: none;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+    padding: 0.45rem;
+  }
+}

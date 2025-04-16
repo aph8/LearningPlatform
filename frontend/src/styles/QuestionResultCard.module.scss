@@ -1,0 +1,50 @@
+$margin-bottom: 1rem;
+$padding: 1rem;
+$border-radius: 0.5rem;
+$shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+
+$green-border: #16a34a;
+$green-bg: rgba(22, 163, 74, 0.1);
+$red-border: #dc2626;
+$red-bg: rgba(220, 38, 38, 0.1);
+$text-green: #16a34a;
+$text-red: #dc2626;
+$text-color: #1f2937;
+
+.fontMedium {
+  font-weight: 500;
+}
+
+.fontSemibold {
+  font-weight: 600;
+}
+
+.container {
+  margin-bottom: $margin-bottom;
+  padding: $padding;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  color: $text-color;
+
+  @media (max-width: 480px) {
+    padding: 0.75rem;
+  }
+}
+
+.correct {
+  border: 1px solid $green-border;
+  background-color: $green-bg;
+}
+
+.incorrect {
+  border: 1px solid $red-border;
+  background-color: $red-bg;
+}
+
+.correctText {
+  color: $text-green;
+}
+
+.incorrectText {
+  color: $text-red;
+}

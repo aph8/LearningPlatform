@@ -1,0 +1,58 @@
+$background-color: #f7f7f7;
+$foreground-color: #333333;
+$muted-color: #6b7280;
+$error-color: #ef4444;
+
+$title-font-size: 1.5rem;
+$title-font-size-sm: 1.25rem;
+$title-weight: 600;
+$page-padding: 1.5rem;
+$gap: 1.5rem;
+
+.dashboardContainer {
+  min-height: 100vh;
+  padding: $page-padding;
+  background-color: $background-color;
+  color: $foreground-color;
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+  }
+}
+
+.welcomeText {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
+}
+
+.header {
+  font-size: $title-font-size;
+  font-weight: $title-weight;
+  margin-bottom: 0.5rem;
+
+  @media (max-width: 480px) {
+    font-size: $title-font-size-sm;
+  }
+}
+
+.errorMessage {
+  color: $error-color;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.mutedText {
+  color: $muted-color;
+  font-size: 0.95rem;
+}
+
+.coursesContainer {
+  > *:not(:last-child) {
+    margin-bottom: $gap;
+  }
+}

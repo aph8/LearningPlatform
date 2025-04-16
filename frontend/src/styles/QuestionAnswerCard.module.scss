@@ -1,0 +1,53 @@
+$card-bg: #ffffff;
+$radius: 0.5rem;
+$shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+$text-color: #1f2937;
+$spacing: 0.5rem;
+
+.cardContainer {
+  padding: 1rem;
+  background-color: $card-bg;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  color: $text-color;
+
+  @media (max-width: 480px) {
+    padding: 0.75rem;
+  }
+}
+
+.questionText {
+  font-weight: 600;
+  margin-bottom: $spacing;
+  font-size: 1rem;
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
+}
+
+.optionsContainer {
+  > *:not(:last-child) {
+    margin-bottom: $spacing;
+  }
+}
+
+.optionLabel {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  cursor: pointer;
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
+}
+
+.radioInput {
+  margin-right: 0.5rem;
+  transform: scale(1.1);
+
+  @media (max-width: 480px) {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,74 @@
+$bg: #f9fafb;
+$text: #1f2937;
+$red: #dc2626;
+$primary: #4f46e5;
+$primary-hover: #4338ca;
+
+$radius: 0.5rem;
+$font-size: 1rem;
+$font-size-sm: 0.95rem;
+$shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: $bg;
+  color: $text;
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+
+  @media (max-width: 480px) {
+    font-size: 1.25rem;
+  }
+}
+
+.error {
+  color: $red;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: $font-size-sm;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.submitButton {
+  padding: 0.75rem 1.5rem;
+  background-color: $primary;
+  color: #fff;
+  border: none;
+  border-radius: $radius;
+  font-weight: 500;
+  font-size: $font-size;
+  box-shadow: $shadow;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 480px) {
+    font-size: $font-size-sm;
+    padding: 0.65rem 1.25rem;
+  }
+}

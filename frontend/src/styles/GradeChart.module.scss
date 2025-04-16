@@ -1,0 +1,17 @@
+$card-bg: #ffffff;
+$radius: 0.5rem;
+$shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+$padding: 1rem;
+$margin-bottom: 2rem;
+
+.chartContainer {
+  margin-bottom: $margin-bottom;
+  background-color: $card-bg;
+  padding: $padding;
+  border-radius: $radius;
+  box-shadow: $shadow;
+
+  @media (max-width: 480px) {
+    padding: 0.75rem;
+  }
+}

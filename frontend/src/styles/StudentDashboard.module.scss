@@ -1,0 +1,83 @@
+$background-color: #f7f7f7;
+$text-color: #333333;
+$card-background: #ffffff;
+$muted-color: #6b7280;
+$hover-gray: #374151;
+
+$radius: 0.5rem;
+$shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+$gap: 1.5rem;
+
+.dashboardContainer {
+  min-height: 100vh;
+  padding: 1.5rem;
+  background-color: $background-color;
+  color: $text-color;
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+  }
+}
+
+.welcomeText {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
+}
+
+.courseHeader {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+  }
+}
+
+.message {
+  color: $muted-color;
+  margin-bottom: $gap;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.courseList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: $gap;
+
+  > li:not(:last-child) {
+    margin-bottom: $gap;
+  }
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $gap;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.linkCard {
+  padding: 1rem;
+  background-color: $card-background;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  &:hover {
+    background-color: $hover-gray;
+    color: #fff;
+  }
+}

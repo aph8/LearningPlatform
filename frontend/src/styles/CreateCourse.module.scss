@@ -1,0 +1,118 @@
+$background: #f7f7f7;
+$foreground: #333333;
+$primary: #0070f3;
+$primary-foreground: #ffffff;
+$error-color: #ef4444;
+$border-color: #ccc;
+
+$radius: 0.5rem;
+$shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+
+.container {
+  min-height: 100vh;
+  padding: 1.5rem;
+  background-color: $background;
+  color: $foreground;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
+}
+
+.error {
+  color: $error-color;
+  margin-bottom: 1rem;
+  text-align: center;
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
+}
+
+.form {
+  width: 100%;
+  max-width: 32rem;
+  background-color: #ffffff;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  padding: 2rem;
+
+  & > *:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.25rem;
+  }
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid $border-color;
+  border-radius: $radius;
+  background-color: $background;
+  color: $foreground;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    border-color: $primary;
+    outline: none;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+    padding: 0.45rem;
+  }
+}
+
+.button {
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: $primary;
+  color: $primary-foreground;
+  border: none;
+  border-radius: $radius;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  &:hover {
+    background-color: $primary-foreground;
+    color: $primary;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
+}

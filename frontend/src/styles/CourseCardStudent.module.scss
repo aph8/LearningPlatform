@@ -1,0 +1,92 @@
+$card-bg: #ffffff;
+$shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+$border-radius: 0.5rem;
+$padding: 1rem;
+
+$text-lg: 1.125rem;
+$text-md: 1rem;
+$text-sm: 0.875rem;
+
+$font-semibold: 600;
+$font-medium: 500;
+
+$muted-color: #6b7280;
+
+$mb-2: 0.5rem;
+$mt-2: 0.5rem;
+$mt-4: 1rem;
+$space-y-2: 0.5rem;
+
+.cardContainer {
+  padding: $padding;
+  background-color: $card-bg;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.75rem;
+  }
+}
+
+.courseName {
+  font-size: $text-lg;
+  font-weight: $font-semibold;
+  color: #1f2937;
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
+}
+
+.description {
+  font-size: $text-sm;
+  color: $muted-color;
+  margin-bottom: $mb-2;
+
+  @media (max-width: 480px) {
+    font-size: 0.85rem;
+  }
+}
+
+.assignmentsHeader {
+  font-size: $text-md;
+  font-weight: $font-medium;
+  margin-top: $mt-4;
+  color: #1f2937;
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
+}
+
+.noAssignments {
+  font-size: $text-sm;
+  color: $muted-color;
+
+  @media (max-width: 480px) {
+    font-size: 0.85rem;
+  }
+}
+
+.assignmentList {
+  margin-top: $mt-2;
+  list-style-type: disc;
+  margin-left: 1.5rem;
+
+  > li:not(:last-child) {
+    margin-bottom: $space-y-2;
+  }
+
+  font-size: $text-sm;
+  color: #374151;
+
+  @media (max-width: 480px) {
+    font-size: 0.85rem;
+    margin-left: 1rem;
+  }
+}

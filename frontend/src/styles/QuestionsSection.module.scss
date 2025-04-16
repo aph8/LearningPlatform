@@ -1,0 +1,64 @@
+$border-color: #ccc;
+$pt: 1rem;
+$heading-font-size: 1.25rem;
+$font-semibold: 600;
+$mb: 0.5rem;
+
+$button-margin-top: 0.5rem;
+$button-padding-y: 0.5rem;
+$button-padding-x: 1rem;
+$button-radius: 0.5rem;
+
+$button-bg: #9333ea;
+$button-text: #ffffff;
+$button-hover-bg: #7e22ce;
+$button-hover-text: #9333ea;
+
+.questionsSection {
+  border-top: 1px solid $border-color;
+  padding-top: $pt;
+  margin-top: 2rem;
+
+  @media (max-width: 480px) {
+    padding-top: 0.75rem;
+  }
+}
+
+.heading {
+  font-size: $heading-font-size;
+  font-weight: $font-semibold;
+  margin-bottom: $mb;
+  color: #1f2937;
+
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+  }
+}
+
+.addQuestionButton {
+  margin-top: $button-margin-top;
+  padding: $button-padding-y $button-padding-x;
+  background-color: $button-bg;
+  color: $button-text;
+  border: none;
+  border-radius: $button-radius;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  &:hover {
+    background-color: $button-hover-bg;
+    color: $button-hover-text;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+    padding: 0.45rem 0.75rem;
+  }
+}

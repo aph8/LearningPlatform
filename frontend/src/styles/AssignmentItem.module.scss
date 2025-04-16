@@ -1,0 +1,152 @@
+$mb-2: 0.5rem;
+$gap-2: 0.5rem;
+$gap-3: 0.75rem;
+$text-sm: 0.875rem;
+$font-medium: 500;
+
+
+$green-600: #16a34a;
+$yellow-500: #f59e0b;
+$yellow-600: #d97706;
+$blue-400: #3b82f6;
+$blue-300: #60a5fa;
+$green-400: #4ade80;
+$green-300: #86efac;
+$secondary: #9333ea;
+$secondaryHover: #7e22ce;
+$red-600: #dc2626;
+$red-700: #b91c1c;
+$gray-400: #9ca3af;
+
+.assignmentItem {
+  margin-bottom: $mb-2;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+
+  @media (max-width: 480px) {
+    padding: 0.75rem;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-2;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.assignmentName {
+  font-weight: $font-medium;
+  font-size: 1rem;
+  color: #1f2937;
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
+}
+
+.publishedLabel {
+  color: $green-600;
+}
+
+.unpublishedLabel {
+  color: $yellow-500;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap-3;
+  margin-top: 0.5rem;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
+}
+
+.editLink,
+.viewGradesLink {
+  font-size: $text-sm;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.editLink {
+  color: $blue-400;
+
+  &:hover {
+    color: $blue-300;
+  }
+}
+
+.viewGradesLink {
+  color: $green-400;
+
+  &:hover {
+    color: $green-300;
+  }
+}
+
+.button {
+  font-size: $text-sm;
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.unpublishButton {
+  @extend .button;
+  background-color: $yellow-500;
+  color: #000;
+
+  &:hover {
+    background-color: $yellow-600;
+  }
+}
+
+.publishButton {
+  @extend .button;
+  background-color: $secondary;
+  color: #ffffff;
+
+  &:hover {
+    background-color: $secondaryHover;
+  }
+}
+
+
+.deleteButton {
+  @extend .button;
+}
+
+.enabled {
+  background-color: $red-600;
+  color: #ffffff;
+
+  &:hover {
+    background-color: $red-700;
+  }
+}
+
+.disabled {
+  background-color: $gray-400;
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+.disabledLink {
+  color: $gray-400;
+  text-decoration: line-through;
+  cursor: not-allowed;
+}

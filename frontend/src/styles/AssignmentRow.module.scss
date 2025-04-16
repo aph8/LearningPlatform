@@ -1,0 +1,92 @@
+$primary: #0070f3;
+$primaryForeground: #ffffff;
+$blue500: #3b82f6;
+$blue600: #2563eb;
+$greenOpacity: rgba(16, 185, 129, 0.1);
+$greenBorder: #16a34a;
+$bgDefault: #ffffff;
+$text: #1f2937;
+$borderColor: #ccc;
+
+.assignmentRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid $borderColor;
+  border-radius: 0.5rem;
+  background-color: $bgDefault;
+  color: $text;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  }
+
+  @media (min-width: 640px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.completed {
+  background-color: $greenOpacity;
+  border-color: $greenBorder;
+}
+
+.notCompleted {
+  background-color: $bgDefault;
+}
+
+.assignmentText {
+  font-weight: 500;
+  font-size: 1rem;
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  @media (min-width: 640px) {
+    justify-content: flex-end;
+  }
+}
+
+.linkReview,
+.linkTake {
+  padding: 0.4rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.linkReview {
+  background-color: $blue500;
+  color: #fff;
+
+  &:hover {
+    background-color: $blue600;
+  }
+}
+
+.linkTake {
+  background-color: $primary;
+  color: $primaryForeground;
+
+  &:hover {
+    background-color: $primaryForeground;
+    color: $primary;
+  }
+}

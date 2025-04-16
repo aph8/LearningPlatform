@@ -1,0 +1,114 @@
+$padding: 1rem;
+$card-bg: #ffffff;
+$border-radius: 0.5rem;
+$shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+
+$text-xl: 1.25rem;
+$text-lg: 1.125rem;
+$text-sm: 0.875rem;
+$font-semibold: 600;
+$font-medium: 500;
+
+$muted: #6b7280;
+
+$mb-2: 0.5rem;
+
+.cardContainer {
+  padding: $padding;
+  background-color: $card-bg;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.75rem;
+  }
+}
+
+.courseTitle {
+  font-size: $text-xl;
+  font-weight: $font-semibold;
+  color: #1f2937;
+
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+  }
+}
+
+.courseDescription {
+  color: $muted;
+  margin-bottom: $mb-2;
+  font-size: $text-sm;
+}
+
+.actionArea {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: $mb-2;
+}
+
+.editLink {
+  font-size: $text-sm;
+  text-decoration: underline;
+  color: #3b82f6;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #93c5fd;
+  }
+}
+
+.toggleStudentsButton {
+  font-size: $text-sm;
+  text-decoration: underline;
+  color: #3b82f6;
+
+  &:hover {
+    color: #2563eb;
+  }
+}
+
+.deleteCourseButton {
+  font-size: $text-sm;
+  text-decoration: underline;
+  color: #ef4444;
+
+  &:hover {
+    color: #dc2626;
+  }
+}
+
+.studentsList {
+  margin-top: 0.5rem;
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  font-size: $text-sm;
+  color: $muted;
+}
+
+.assignmentsHeader {
+  margin-top: 1rem;
+}
+
+.assignmentsHeaderText {
+  font-size: $text-lg;
+  font-weight: $font-medium;
+  color: #1f2937;
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
+}
+
+.assignmentsList {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  font-size: $text-sm;
+  margin-top: 0.5rem;
+  color: $muted;
+}

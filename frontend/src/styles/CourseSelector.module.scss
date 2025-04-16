@@ -1,0 +1,54 @@
+$background: #ffffff;
+$foreground: #333333;
+$muted: #6b7280;
+$padding: 0.5rem;
+$marginSmall: 0.25rem;
+$marginDefault: 1rem;
+$borderColor: #ccc;
+$borderRadius: 0.5rem;
+
+.container {
+  margin-bottom: $marginDefault;
+}
+
+/* Label for the select dropdown */
+.label {
+  display: block;
+  margin-bottom: $marginSmall;
+  font-weight: 500;
+  color: $foreground;
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
+}
+
+.message {
+  font-size: 0.875rem;
+  color: $muted;
+
+  @media (max-width: 480px) {
+    font-size: 0.85rem;
+  }
+}
+
+.select {
+  width: 100%;
+  padding: $padding;
+  border: 1px solid $borderColor;
+  border-radius: $borderRadius;
+  background-color: $background;
+  color: $foreground;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: #0070f3; 
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+    padding: 0.45rem;
+  }
+}

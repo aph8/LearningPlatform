@@ -1,0 +1,126 @@
+/* --- Common Variables --- */
+$card-bg: #ffffff;
+$border-color: #ccc;
+$foreground: #333333;
+$padding: 1rem;
+$rounded: 0.5rem;
+$shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+
+$mb-2: 0.5rem;
+$space-y-2: 0.5rem;
+$space-y-3: 0.75rem;
+
+/* --- Answer UI Styles --- */
+.answerContainer {
+  padding: $padding;
+  background-color: $card-bg;
+  border-radius: $rounded;
+  box-shadow: $shadow;
+  color: $foreground;
+
+  @media (max-width: 480px) {
+    padding: 0.75rem;
+  }
+}
+
+.questionText {
+  font-weight: 600;
+  margin-bottom: $mb-2;
+  font-size: 1rem;
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
+}
+
+.optionsContainer {
+  > *:not(:last-child) {
+    margin-bottom: $space-y-2;
+  }
+}
+
+.optionLabel {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  cursor: pointer;
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
+}
+
+.radioInput {
+  margin-right: 0.5rem;
+  transform: scale(1.1);
+
+  @media (max-width: 480px) {
+    transform: scale(1);
+  }
+}
+
+/* --- Editor UI Styles --- */
+.editorContainer {
+  border: 1px solid $border-color;
+  padding: $padding;
+  border-radius: $rounded;
+  margin-bottom: 1rem;
+  background-color: $card-bg;
+  color: $foreground;
+  box-shadow: $shadow;
+
+  > *:not(:last-child) {
+    margin-bottom: $space-y-3;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.75rem;
+  }
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.formInput,
+.selectInput {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid $border-color;
+  border-radius: $rounded;
+  background-color: $card-bg;
+  color: $foreground;
+  font-size: 1rem;
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+    padding: 0.45rem;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #0070f3;
+  }
+}
+
+.removeButton {
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background-color: #dc2626;
+  color: #ffffff;
+  border: none;
+  border-radius: $rounded;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #b91c1c;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    padding: 0.25rem 0.65rem;
+  }
+}

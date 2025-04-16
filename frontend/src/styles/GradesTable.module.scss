@@ -1,0 +1,70 @@
+$card-bg: #ffffff;
+$radius: 0.5rem;
+$shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+$padding: 1.5rem;
+$header-bg: #f9fafb;
+$border: #e5e7eb;
+$text-primary: #111827;
+$text-secondary: #374151;
+$text-muted: #4b5563;
+$hover-bg: #f3f4f6;
+
+.container {
+  background-color: $card-bg;
+  padding: $padding;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  margin-top: 2rem;
+  overflow-x: auto;
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+  }
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: $text-primary;
+
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 100%;
+}
+
+.tableHead {
+  background-color: $header-bg;
+}
+
+.headerCell {
+  border-bottom: 2px solid $border;
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: $text-secondary;
+  white-space: nowrap;
+}
+
+.bodyRow {
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: $hover-bg;
+  }
+}
+
+.bodyCell {
+  border-bottom: 1px solid $border;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  color: $text-muted;
+  white-space: nowrap;
+}

@@ -1,0 +1,33 @@
+$logout-bg: #dc2626; 
+$logout-hover: #b91c1c; 
+$logout-text: #ffffff;
+$radius: 0.5rem;
+
+.logoutButton {
+  padding: 0.5rem 1rem;
+  background-color: $logout-bg;
+  color: $logout-text;
+  border-radius: $radius;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    background-color: $logout-hover;
+    transform: scale(1.03);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+    padding: 0.45rem 0.85rem;
+  }
+}

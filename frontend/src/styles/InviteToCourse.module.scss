@@ -1,0 +1,76 @@
+$background-color: #f7f7f7;
+$foreground-color: #333333;
+$primary-color: #0070f3;
+$primary-foreground: #ffffff;
+$blue-500: #3b82f6;
+
+$container-padding: 1.5rem;
+$min-screen-height: 100vh;
+
+$radius: 0.5rem;
+$shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
+
+.container {
+  min-height: $min-screen-height;
+  padding: $container-padding;
+  background-color: $background-color;
+  color: $foreground-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+
+  @media (max-width: 480px) {
+    font-size: 1.25rem;
+  }
+}
+
+.message {
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: $blue-500;
+  text-align: center;
+
+  @media (max-width: 480px) {
+    font-size: 0.85rem;
+  }
+}
+
+.inviteButton {
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: $primary-color;
+  color: $primary-foreground;
+  border: none;
+  border-radius: $radius;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  &:hover {
+    background-color: $primary-foreground;
+    color: $primary-color;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,65 @@
+$background: #ffffff;
+$foreground: #333333;
+$border: #ccc;
+$card-bg: #f1f1f1;
+$hover-bg: #e2e8f0;
+$shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+
+.autocompleteContainer {
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  color: $foreground;
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid $border;
+  border-radius: 0.5rem;
+  background-color: $background;
+  color: $foreground;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: #0070f3;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+    padding: 0.45rem;
+  }
+}
+
+.list {
+  background-color: $card-bg;
+  border: 1px solid $border;
+  border-radius: 0.5rem;
+  box-shadow: $shadow;
+  list-style: none;
+  margin-top: 0.25rem;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.listItem {
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 0.95rem;
+
+  &:hover {
+    background-color: $hover-bg;
+  }
+}

@@ -1,0 +1,32 @@
+$toggle-bg: #1f2937;
+$toggle-bg-hover: #374151;
+$text-light: #ffffff;
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+.toggleButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 50;
+  padding: 0.75rem;
+  background-color: $toggle-bg;
+  color: $text-light;
+  border-radius: 9999px;
+  box-shadow: $shadow-lg;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    background-color: $toggle-bg-hover;
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.6rem;
+    bottom: 0.75rem;
+    right: 0.75rem;
+  }
+}

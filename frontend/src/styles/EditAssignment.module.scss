@@ -1,0 +1,100 @@
+$bg-background: #f7f7f7;
+$text-foreground: #333333;
+$primary: #0070f3;
+$primary-foreground: #ffffff;
+$error-color: #ef4444;
+
+$title-font-size: 1.875rem;
+$padding: 1.5rem;
+$mb-title: 1rem;
+$space-y-form: 1.5rem;
+$max-width-form: 48rem;
+
+$button-padding-y: 0.5rem;
+$button-padding-x: 1.5rem;
+$button-border-radius: 0.5rem;
+
+$card-bg: #ffffff;
+$shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+.container {
+  min-height: 100vh;
+  padding: $padding;
+  background-color: $bg-background;
+  color: $text-foreground;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+.title {
+  font-size: $title-font-size;
+  font-weight: bold;
+  margin-bottom: $mb-title;
+  text-align: center;
+
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
+}
+
+.error {
+  color: $error-color;
+  margin-bottom: 1rem;
+  text-align: center;
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
+}
+
+.form {
+  width: 100%;
+  max-width: $max-width-form;
+  background-color: $card-bg;
+  border-radius: $button-border-radius;
+  box-shadow: $shadow;
+  padding: 2rem;
+
+  > *:not(:last-child) {
+    margin-bottom: $space-y-form;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.25rem;
+  }
+}
+
+.submitButton {
+  display: inline-block;
+  width: 100%;
+  padding: $button-padding-y $button-padding-x;
+  background-color: $primary;
+  color: $primary-foreground;
+  border: none;
+  border-radius: $button-border-radius;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  &:hover {
+    background-color: $primary-foreground;
+    color: $primary;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+  }
+}
